@@ -1,0 +1,145 @@
+/* used to define thickness of margins and paddings, and size of box*/ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* changes spacing with size of window*/
+.menuBar{
+    display:flex;
+    align-items: center;
+    padding: 10px;
+}
+/* defines the amount items flex and aligns them to the right side*/
+menu{
+    flex: 1;
+    text-align: right;
+    
+}
+/* displays items in a row*/
+menu ul{
+    display: inline-block;
+    list-style-type: none;
+}
+/* add margin on the right side*/
+menu ul li{
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+}
+/*determine menu bar text color*/
+a{
+    text-decoration: none;
+    color: #312F26;
+}
+/* destermine paragraph text color*/
+p{
+    color:#312F26;
+}
+/* determines max width of menu bar and add padding*/
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flew-wrap: wrap;
+    justify-content:space-around;
+}
+.column2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.column2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+.column2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.btn{
+    display: inline-block;
+    background: #B44402;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #312F26;
+}
+.header{
+    background: linear-gradient(to bottom right, #fff, #E5A030)
+}
+.header row{
+    margin-top: 70px;
+}
+.catergories{
+    margin:70px 0;
+}
+.column3{
+    flex-basis: 30%;
+    min-width: 225px;
+    max-width: 225px;
+    margin-bottom: 30px;
+}
+.column3 img{
+    width: 100%;
+}
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.menuBar menu ul li :hover{
+    color:#888a4c;
+}
+.popwindow{
+    width: 300px;
+    height: 350px;
+    padding: 15px;
+    position: absolute;
+    text-align: left;
+    box-shadow: 0 5px 15px #8a8a8a;
+}
+.popwindow .poptop{
+    width: 100%;
+    height: 230px;
+}
+.popwindow .poptop{
+    width: 100%;
+}
+.popwindow .poptop  p{
+    line-height: 30px;
+    color: rgb(0, 0, 0);
+}
+.popwindow .poptop  .firstList{
+    line-height: 25px;
+    font-weight: bold;
+    color: #575153;
+    margin-bottom: 10px;
+}
+.popwindow .popbot{
+    width: 100%;
+    height: 85px;
+    font-size: 15px;
+    color: #fff;
+    background: #333;
+    text-align: center;
+    line-height: 20px;
+    padding-top: 20px;
+}
+.popwindow .popbot p{
+    color:#fff;
+}
