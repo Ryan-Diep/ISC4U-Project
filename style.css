@@ -112,6 +112,7 @@ p{
     position: absolute;
     text-align: left;
     box-shadow: 0 5px 15px #8a8a8a;
+    display: none;
 }
 .popwindow .poptop{
     width: 100%;
@@ -142,4 +143,7 @@ p{
 }
 .popwindow .popbot p{
     color:#fff;
+}
+ul li:hover .popwindow{
+    display: block;
 }
