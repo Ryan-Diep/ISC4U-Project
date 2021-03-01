@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+
+.signImg{
+    margin-left: 450px;
+    width: 1250px;
+    height: 450px;
+}
+.inputBox{
+    width: 904px;
+    height: 294px;
+    margin: 40px auto;
+}
+.inputBox div{
+    float: left;
+    width: 400px;
+    height: 100%;
+    pad: 0 26px;
+}
+.inputBox .left{
+    border-right: 1px solid #f4f4f4;
+}
+.inputBox .right{
+    margin-left: 10px;
+}
+.inputBox div p{
+    font-size: 30px;
+    color: #575153;
+    text-align: left;
+    margin-bottom: 34px;
+}
+.inputBox .input{
+    width: 390px;
+    height: 28px;
+    border: 1px solid #e7e7e7;
+    padding-left: 6px;
+    margin-bottom: 25px;
+}
+.sumbitbox{
+    width: 100%;
+    height: 44px;
+}
+.sumbitbox input{
+    width: 110px;
+    height: 449x;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
+    background: #00c8c8;
+    border: 0;
+    cursor: pointer;
+}
+.sumbitbox span{
+    float: right;
+    margin-top: 16px;
+    font-size: 10px; 
+    color: #00c8c8;
+    cursor: pointer;
+    padding-right: 10px;
+}
+.creatAccount{
+    width: 100%;
+    height: 44px;
+    padding-left: 5px;
+}
+.creatAccount input{
+    width: 150px;
+    height: 449x;
+    text-align: center;
+    line-height: 42px;
+    color: #575153;
+    background-color: #fff;
+    border: 3px solid #575153;
+    cursor: pointer;
+}
