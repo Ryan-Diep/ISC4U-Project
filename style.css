@@ -105,6 +105,12 @@ p{
 .menuBar menu ul li :hover{
     color:#888a4c;
 }
+.menuBar menu ul li input{
+    width: 140px;
+    height: 23px;
+    border: 1px solid #ececec;
+    border-radius: 20px;
+}
 .popwindow{
     width: 300px;
     height: 350px;
