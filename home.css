@@ -28,7 +28,7 @@ nav ul{
 /* add margin on the right side*/
 nav ul li{
     display: inline-block;
-    margin-right: 20px
+    margin-right: 10px
 }
 /*determine menu bar text color*/
 a{
@@ -66,17 +66,49 @@ p{
     line-height: 60px;
     margin: 25px 0;
 }
-.btn{
+.logoButton{
+    border: 2px solid transparent;
+    border-radius: 3px;
+    padding: 8px 3px;
+    transition: border 0.3s;
+}
+.logoButton:hover{
+    border: 2px solid #FAF6EF;
+    padding: 8px 3px;
+    padding-bottom: 8px;
+}
+.cartButton{
+    border: 2px solid transparent;
+    border-radius: 3px;
+    padding: 3px;
+    transition: border 0.3s;
+}
+.cartButton:hover{
+    border: 2px solid #FAF6EF;
+    border-radius: 3px;
+    padding: 3px;
+}
+.navbarButton{
+    border: 2px solid transparent;
+    border-radius: 3px;
+    padding: 5px;
+    transition: border 0.3s;
+}
+.navbarButton:hover{
+    border: 2px solid #FAF6EF;
+    border-radius: 3px;
+    padding: 5px;
+}
+.exploreButton{
     display: inline-block;
     background: #B44402;
     color: #FAF6EF;
     padding: 8px 30px;
     margin: 30px 0;
     border-radius: 30px;
-    transition: background 0.5s;
+    transition: background-color 0.5s;
 }
-
-.btn:hover{
+.exploreButton:hover{
     background: #312F26;
 }
 .header{
@@ -101,10 +133,10 @@ p{
 .column3:hover{
     transform:translateY(-10px);
 }
-.small-container{
+.smallContainer{
     max-width: 1080px;
     margin: auto;
-    padding-left: 25px;
+    padding-left: 0px;
     padding-right: 25px;
 }
 .column4{
@@ -149,6 +181,47 @@ h4{
 .column4:hover{
     transform:translateY(-10px);
 }
+.footer{
+    background: #312F26;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #FAF6EF;
+    margin-bottom: 20px;
+}
+.footer-column1, .footer-column2, .footer-column3, .footer-column4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-column1{
+    flex-basis: 30%;
+}
+.footer-column2{
+    flex: 1;
+    text-align: center;
+}
+.footer-column2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-column3, .footer-column4{
+    flex-basis: 12%;
+    text-align: center;
+}
+.foote hr{
+    border: non;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+ul{
+    list-style-type: none;
+}
 .menu-icon{
     width: 28px;
     margin-left: 20px;
@@ -162,6 +235,8 @@ h4{
         left: 0;
         background: #312F26;
         width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
     }
     nav ul li{
         display: block;
@@ -172,5 +247,15 @@ h4{
     .menu-icon{
         display: block;
         cursor: pointer;
+    }
+}
+
+/*--media query for less than 600 screen size--*/
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .column2, .column3, .column4{
+        flex-basis: 100%;
     }
 }
