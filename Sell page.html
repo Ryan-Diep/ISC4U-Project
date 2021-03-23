@@ -1,285 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<link rel="stylesheet" href="sell.css">
-		<style type="text/css">
-			* {
-				padding: 0;
-				margin: 0;
-			}
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+<title>Sell</title>
+</head>
 
-			table {
-				position: absolute;
-				left: 300px;
-				top: 100px;
-			}
-
-			th {
-				width: 150px;
-				height: 50px;
-				background: skyblue;
-			}
-
-			tr {
-				width: 150px;
-				height: 50px;
-				text-align: center;
-			}
-
-			.left {
-				width: 200px;
-				height: 600px;
-				float: left;
-				margin-left: 10px;
-				margin-top: 10px;
-			}
-
-			.right {
-				width: 200px;
-				height: 600px;
-				float: right;
-				margin-right: 10px;
-				margin-top: 10px;
-			}
-
-			.pic {
-				width: 100px;
-			}
-
-			.money {
-				color: red;
-			}
-
-			button {
-				width: 20px;
-			}
-
-			.buy-dish {
-				width: 30px;
-				text-align: center;
-				color: white;
-				display: inline-block;
-				background: #FF0000;
-				font-size: 20px;
-				line-height: 20px;
-				margin-left: 75px;
-				cursor: pointer;
-			}
-
-			.buy-dish:hover {
-				background: gray;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="container">
-			<div class="header">
-				<p>Sell</p>
-			</div>
-			<div class="form-body">
-				<form action="#">
-					<div class="form-group">
-						<label for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							Title:</label>
-						<input type="text" class="form-input">
-					</div>
-				</form>
-				<form action="#">
-					<div class="form-group">
-						<label for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							Author:</label>
-						<input type="password" class="form-input">
-					</div>
-					<form action="#">
-						<div class="form-group">
-							<label for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								Price: $</label>
-							<input type="text" class="form-input">
-						</div>
-					</form>
-					<form action="#">
-						<div class="form-group">
-							<label for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								ISBN:</label>
-							<input type="text" class="form-input">
-						</div>
-					</form>
-					<form action="#">
-						<div class="form-group">
-							<label for="">Description:</label>
-							<input type="text" class="Des-input">
-						</div>
-					</form>
-				</form>
-				<div class="btn">
-					<input type="button" value="Submit" class="form-btn form-btn-primary">
-					
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="menuBar">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" width="130px"></a>
 				</div>
+				<!--list of items on menubar-->
+				<menu>
+					<ul>
+						<li><input type="text" value="Search.."></li>
+						<li ><a href="index.html">Home</a></li>
+						<li><a href="">Browse</a>
+							<div class="popwindow">
+								<div class="poptop">
+										<p class="firstList">Subjects:</p>
+										<p>Business</p>
+										<p>Computer science</p>
+										<p>Educational</p>
+										<p>Engineering</p>
+										<p>Humanities</p>
+										<p>Mathematics</p>
+								</div>
+								<div class="popbot">
+									<p>Spring Sale!</br>
+									Up to 50% OFF!!</p>
+								</div>
+							</div>
+						</li>
+						<li><a href="Sell page.html">Sell</a></li>
+						<li><a href="about us.html">About Us/FAQ</a></li>
+						<li><a href="Account login.html">Account</a></li>
+					</ul>
+				</nav>
+				<img src="images/cart.png" width="30px" height="30px">
 			</div>
-		<table border="1px" cellspacing="0" cellpadding="0" id="tb">
-			<tr>
-				<th>Title</th>
-				<th>Quantity</th>
-				<th>Price</th>
-				<th>sum</th>
-				<th>Action</th>
-			</tr>
-			
-			<tr>
-				<td colspan="5">Total #:<span id="goods-total-num">0</span>件,总计<span id="goods-total-price">0</span>元</td>
-			</tr>
-			<div class="left">
-				<img src="img/1.png" width="200" height="200"><span class="pic">
-					<span class="dish-name">Enginneering</span>
-					<span class="dish-money">25</span>
-					<span class="buy-dish">+</span>
-					<img src="img/2.png" width="200" height="200"><span class="pic">
-						<span class="dish-name">Mathematics</span>
-						<span class="dish-money">22</span>
-						<span class="buy-dish">+</span>
-			</div>
-			<div class="right">
-				<img src="img/3.png" width="200" height="200"><span class="pic">
-					<span class="dish-name">English</span></span>
-				<span class="dish-money">24</span>
-				<span class="buy-dish">+</span>
-				<img src="img/4.png" width="200" height="200"><span class="pic">
-					<span class="dish-name">Business</span>
-					<span class="dish-money">21</span>
-					<span class="buy-dish">+</span>
-			</div>
-		</table>
-	</body>
+		</div>
+	</div>
+<!----------------------banner--------------------->
+
+<!----------------------Footer--------------------->
+	<div class="bottomBox">
+		<div class="botul">
+			<ul>
+				<li>EARL OF MARCH SS</li>
+				<li>4 The Parkway, Kanata, ON K2K 1Y4</li>
+				<li>Phone (613) 592-3361 | Fax (613) 592-9501</li>
+				<li>Email: earlofmarchss@ocdsb.ca </li>
+			</ul>
+		</div>
+	</div>
+</body>
 </html>
-<script type="text/javascript">
-	class Cart {
-		constructor() {
-
-		}
-
-		//商品总数
-
-		getGoodsTotalNum() {
-			let oGoodsNum = document.getElementsByClassName("goods-num");
-			let goodsTotalNum = 0;
-			for (let i = 0; i < oGoodsNum.length; i++) {
-				goodsTotalNum += Number(oGoodsNum[i].innerHTML);
-			}
-			let oGoodsTotalNum = document.getElementById("goods-total-num");
-			oGoodsTotalNum.innerHTML = goodsTotalNum;
-		}
-
-		//商品总价格
-
-		getGoodsTotalPrice() {
-			let oGoodsSubtota = document.getElementsByClassName("goods-subtota");
-			let goodsTotalPrice = 0;
-			for (let i = 0; i < oGoodsSubtota.length; i++) {
-				goodsTotalPrice += Number(oGoodsSubtota[i].innerHTML);
-			}
-			let oGoodsTotalPrice = document.getElementById("goods-total-price");
-			oGoodsTotalPrice.innerHTML = goodsTotalPrice;
-		}
-
-		//小计
-
-		getGoodsSubtota(num, price) {
-			return num * price;
-		}
-
-		//增加货物
-
-		getGoodsAdd(btn) {
-			let oGoodsNum = btn.previousElementSibling;
-			oGoodsNum.innerHTML = (Number(oGoodsNum.innerHTML)) + 1;
-			//单价
-			let oGoodsPrice = btn.parentNode.nextElementSibling.firstElementChild;
-			//小计
-			let goodsSubtota = this.getGoodsSubtota(oGoodsNum.innerHTML, oGoodsPrice.innerHTML);
-			//找到小计
-			let oGoodSubtota = btn.parentNode.nextElementSibling.nextElementSibling.firstElementChild;
-			//改变小计的值
-			oGoodSubtota.innerHTML = goodsSubtota;
-			this.Addcart()
-			this.getGoodsTotalNum();
-			this.getGoodsTotalPrice();
-		}
-
-		//减少货物
-
-		getGoodsReduce(btn) {
-			let oGoodsNum = btn.nextElementSibling;
-			if (oGoodsNum.innerHTML > 0) {
-				let oGoodsNum = btn.nextElementSibling;
-				oGoodsNum.innerHTML = (Number(oGoodsNum.innerHTML)) - 1;
-				//单价
-				let oGoodsPrice = btn.parentNode.nextElementSibling.firstElementChild;
-				//小计
-				let goodsSubtota = this.getGoodsSubtota(oGoodsNum.innerHTML, oGoodsPrice.innerHTML);
-				//找到小计
-				let oGoodSubtota = btn.parentNode.nextElementSibling.nextElementSibling.firstElementChild;
-				//改变小计的值
-				oGoodSubtota.innerHTML = goodsSubtota;
-			}
-		}
-
-		//删除货物
-
-		goodsDel(btn) {
-			let tr = btn.parentNode.parentNode;
-			tr.remove();
-			this.getGoodsTotalNum();
-			this.getGoodsTotalPrice();
-		}
-
-		//添加事件
-		eventBind() {
-			let btn = document.getElementsByTagName("button");
-			let that = this;
-			let del = document.getElementsByClassName("del");
-			for (let i = 0; i < btn.length; i++) {
-				if (i % 2 == 0) {
-					btn[i].onclick = function(evt) {
-						that.getGoodsReduce(this);
-					}
-				} else {
-					btn[i].onclick = function(evt) {
-						that.getGoodsAdd(this);
-					}
-				}
-			}
-			for (let i = 0; i < del.length; i++) {
-				del[i].onclick = function() {
-					that.goodsDel(this);
-				}
-			}
-		}
-		//添加购物车
-		Addcart(){
-			let oBuyDish = document.getElementsByClassName("buy-dish");
-			let oDishName = document.getElementsByClassName("dish-name");
-			let oDishMoney = document.getElementsByClassName("dish-money");
-			let that = this;
-			for (let i = 0; i < oBuyDish.length; i++) {
-				oBuyDish[i].onclick = function(evt) {
-					let e = evt || event;
-					let target = e.target || e.srcElement;
-					let tb = document.getElementById("tb");
-					if(target.className=="buy-dish"){
-						let tr = tb.insertRow(1);
-						tr.innerHTML = "<td>" + oDishName[i].innerText + "</td>" +
-							"<td>" + "<button>" + "-" + "</button>" + "<span class='goods-num'>" + 0 + "</span>" + "<button>" + "+" +
-							"</button>" + "</td>" +
-							"<td>" + "Price:" + "<span class='goods-price'>" + oDishMoney[i].innerText + "</span>" + "</td>" +
-							"<td>" + "Sum:" + "<span class='goods-subtota'>" + 0 + "</span>" + "</td>" +
-							"<td>" + "Action" + "<input type='button' name='' class='del'' value='Delete' />" + "</td>";
-					}
-				}
-			}
-		}
-	}
-	let c = new Cart();
-	c.Addcart();
-</script>
