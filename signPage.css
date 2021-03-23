@@ -7,13 +7,13 @@
     height: 450px;
 }
 .inputBox{
-    width: 904px;
-    height: 294px;
-    margin: 40px auto;
+    width: 810px;
+    height: 430px;
+    margin: 123px auto;
 }
 .inputBox div{
     float: left;
-    width: 400px;
+    width: 00px;
     height: 100%;
     pad: 0 26px;
 }
@@ -22,6 +22,7 @@
 }
 .inputBox .right{
     margin-left: 10px;
+    margin-top: 114px;
 }
 .inputBox div p{
     font-size: 30px;
@@ -30,8 +31,8 @@
     margin-bottom: 34px;
 }
 .inputBox .input{
-    width: 390px;
-    height: 28px;
+    width: 300px;
+    height: 40px;
     border: 1px solid #e7e7e7;
     padding-left: 6px;
     margin-bottom: 25px;

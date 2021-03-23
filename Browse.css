@@ -1,0 +1,189 @@
+/* 商品列表 */
+.goodsList {
+    margin: auto;
+    position: relative;
+    width: 1000px;
+    height: 1429px;
+    margin-top: 12px;
+    background-color: rgb(240, 240, 240);
+}
+
+.topimg{
+    margin: auto;
+}
+
+.goodsList ul {
+    margin: auto;
+}
+
+.goodsList ul li {
+    display: block;
+    float: left;
+    position: relative;
+    height: 279px;
+    width: 190px;
+    background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 65px;
+    margin-left: 8px;
+}
+
+/* 对单个商品进行指定 */
+.goodsList ul li .goods {
+    height: 334px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    background-color: inherit;
+    transition: all 0.2s ease;
+}
+
+/* 单个商品左上角的红色小标签 */
+.goodsList ul li .leftTop {
+    display: block;
+    position: absolute;
+    top: 0;
+    margin-top: 1px;
+    margin-left: -1px;
+    width: fit-content;
+    height: 20px;
+    padding: 0 5px 0 3px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    background-color: #ff8385;
+    z-index: 1;
+}
+
+.shopTitle {
+    margin: auto;
+    width: 1000px;
+    height: 406px;
+    align-items: center;
+    text-align: center;
+    line-height: 60px;
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    background-color: #E5A030;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+/* 单个商品左下角的小标签 */
+.goodsList ul li .leftBottom {
+    display: block;
+    position: absolute;
+    height: 15px;
+    left: 8px;
+    border: 1px solid #e31436;
+    border-radius: 3px;
+    background: #fff;
+    color: #e31436;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+/* 商品名字 */
+.goodsList ul li h3 {
+    display: block;
+    height: auto;
+    width: 180px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-top: -2px;
+    margin-left: 4px;
+    overflow: hidden;
+}
+
+/* 鼠标移动到商品栏后，相应的商品显示商品名字，这里用的是white-space属性让标题全部显示 */
+.goodsList ul li:hover .goods {
+    height: 338px;
+    border: 1px solid red;
+    white-space: normal;
+}
+
+.goodsList ul li:hover p {
+    white-space: normal;
+}
+
+.goodsList ul li h3:hover p {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.goodsList ul li img {
+    width: 100%;
+}
+
+/* 单个的商品描述文字 */
+.goodsList ul li .describe {
+    color: #666;
+    margin-left: 4px;
+    margin-top: -6px;
+}
+
+/* 单个商品的价格，采用大红色显示 */
+.goodsList ul li .value {
+    position: relative;
+    color: rgb(227, 20, 54);
+    background-color: #fff;
+    line-height: 22px;
+    margin-bottom: 14px;
+    z-index: 9999;
+    width: 188px;
+
+}
+
+.goodsList ul li .value a {
+    display: block;
+    float: right;
+    width: fit-content;
+    height: 24px;
+    margin-right: 4px;
+    bottom: 14px;
+    padding: 0 6px;
+    border-radius: 3px;
+    background: #e31436;
+    color: #fff;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+}
+
+/* 商品原价格，这是文字划线，一般用于打折吸引客服 */
+.goodsList ul li .value del {
+    color: #999;
+}
+
+/* ----------右侧导航栏------------- */
+ul.rightNav {
+    position: fixed;
+    left: 120px;
+    top: 24vh;
+    width: 128px;
+    z-index: 9999;
+}
+
+/* 右侧导航栏的li属性设置 */
+ul.rightNav li {
+    display: block;
+    list-style: none;
+    width: 300px;
+    line-height: 60px;
+    height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    background-color: #E5A030;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 100px;
+}
+
+/* 单鼠标移动到右侧导航栏的指定 li 上时，底色显示为暗红色 */
+ul.rightNav li:hover {
+    background-color: rgb(182, 184, 75);
+}
+
+
