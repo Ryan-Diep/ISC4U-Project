@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-
         scale=1.0">
-        <title>BeeBook | Ecommerce Website Design</title>
-        <link rel="stylesheet" href="product-details.css">
-        <script src="product-details.js"></script>
+        <title>Login and Registration - BeeBook</title>
+        <link rel="stylesheet" href="entry.css">
+        <script src="entry.js"></script>
     </head>
     <body>
         <!------------------header------------------>
@@ -21,7 +21,7 @@
                     <!--list of items on navbar-->
                     <nav>
                         <ul id="MenuItems">
-                            <li><a href="home.html" class="navbarButton">Home</a></li>
+                            <li><a href="index.html" class="navbarButton">Home</a></li>
                             <li><a href="products.html" class="navbarButton">Browse</a></li>
                             <li><a href="" class="navbarButton">Sell</a></li>
                             <li><a href="about.html" class="navbarButton">About Us/FAQ</a></li>
@@ -36,27 +36,44 @@
                 </div>
             </div>
         </div>
-        <!------------------products details------------------>
-        <div class="smallContainer singleProduct">
-            <div class="row">
-                <div class="column2">
-                    <img src="images/math.png" width="100%">
-                </div>
-                <div class="column2">
-                    <h1>Math Textbook</h1>
-                    <p>Subject: Math</p>
-                    <h4>$25.00</h4>
-                    <input type="number" value="1">
-                    <a href="" class="addToCartButton">Add To Cart</a>
-                    <h3>Product Details</h3>
-                    <br>
-                    <p>Perfect for all math students! Math Refresher for Adults is the perfect 
-                        solution for anyone needing a math refresher. Excellent for home school 
-                        parents who want to help their kids with math. Includes video tutorials - 
-                        One for each lesson!</p>
-                </div>
+        <!------------------login/registration------------------>
+        <div class="formBox">
+            <div class="buttonBox">
+                <div id="button"></div>
+                <button type="button" class="toggleButton" onclick="login()">Login</button>
+                <button type="button" class="toggleButton" onclick="register()">Register</button>
             </div>
+            <form id="login" class="inputGroup">
+                <input type="text" class="inputField" placeholder="User Id" required>
+                <input type="password" class="inputField" placeholder="Enter Password" 
+                required>
+                <button type="submit" class="continueButton">Login</button>
+            </form>
+            <form id="register" class="inputGroup">
+                <input type="text" class="inputField" placeholder="User Id" required>
+                <input type="email" class="inputField" placeholder="Email Addresss" 
+                required>
+                <input type="password" class="inputField" placeholder="Enter Password" 
+                required>
+                <button type="continue" class="continueButton">Register</button>
+            </form>
         </div>
+        <script>
+            var x = document.getElementById("login");
+            var y = document.getElementById("register");
+            var z = document.getElementById("button");
+
+            function register(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+            function login(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0";
+            }
+        </script>
         <!------------------footer------------------>
         <div class="footer">
             <div class="container">
@@ -93,5 +110,19 @@
                 <p class="copyright">Copyright 2020 - BeeBook</p>
             </div>
         </div>
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+            
+            MenuItems.style.maxHeight = "0px";
+            
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px"){
+                    MenuItems.style.maxHeight = "200px";
+                }
+                else{
+                    MenuItems.style.maxHeight = "0px";
+                }
+            }
+        </script>
     </body>
 </html>

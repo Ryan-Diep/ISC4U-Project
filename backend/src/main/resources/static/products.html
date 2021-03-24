@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-
         scale=1.0">
-        <title>About Us & FAQ - BeeBook</title>
-        <link rel="stylesheet" href="about.css">
-        <script src="about.js"></script>
+        <title>Products - BeeBook</title>
+        <link rel="stylesheet" href="products.css">
+        <script src="products.js"></script>
     </head>
     <body>
         <!------------------header------------------>
@@ -21,7 +21,7 @@
                     <!--list of items on navbar-->
                     <nav>
                         <ul id="MenuItems">
-                            <li><a href="home.html" class="navbarButton">Home</a></li>
+                            <li><a href="index.html" class="navbarButton">Home</a></li>
                             <li><a href="products.html" class="navbarButton">Browse</a></li>
                             <li><a href="" class="navbarButton">Sell</a></li>
                             <li><a href="about.html" class="navbarButton">About Us/FAQ</a></li>
@@ -36,8 +36,8 @@
                 </div>
             </div>
         </div>
-        <!------------------mission------------------>
-        
+        <!------------------products------------------>
+
         <!------------------footer------------------>
         <div class="footer">
             <div class="container">
@@ -48,7 +48,8 @@
                     </div>
                     <div class="footer-column2">
                         <img src="images/logo-wide.png">
-                        <p>Our Purpose Is To Provide a Platform That Helps Students Sell and Buy Textbooks With Ease.</p>
+                        <p>Our Purpose Is To Provide a Platform That Helps Students Sell 
+                            and Buy Textbooks With Ease.</p>
                     </div>
                     <div class="footer-column3">
                         <h3>Useful Links</h3>
@@ -73,5 +74,19 @@
                 <p class="copyright">Copyright 2020 - BeeBook</p>
             </div>
         </div>
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+            
+            MenuItems.style.maxHeight = "0px";
+            
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px"){
+                    MenuItems.style.maxHeight = "200px";
+                }
+                else{
+                    MenuItems.style.maxHeight = "0px";
+                }
+            }
+        </script>
     </body>
 </html>

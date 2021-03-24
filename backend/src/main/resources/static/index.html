@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-
         scale=1.0">
-        <title>Login and Registration - BeeBook</title>
-        <link rel="stylesheet" href="entry.css">
-        <script src="entry.js"></script>
+        <title>BeeBook | Ecommerce Website Design</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="home.js"></script>
     </head>
     <body>
         <!------------------header------------------>
@@ -21,7 +21,7 @@
                     <!--list of items on navbar-->
                     <nav>
                         <ul id="MenuItems">
-                            <li><a href="home.html" class="navbarButton">Home</a></li>
+                            <li><a href="index.html" class="navbarButton">Home</a></li>
                             <li><a href="products.html" class="navbarButton">Browse</a></li>
                             <li><a href="" class="navbarButton">Sell</a></li>
                             <li><a href="about.html" class="navbarButton">About Us/FAQ</a></li>
@@ -31,50 +31,61 @@
                     <a href="cart.html">
                         <img src="images/cart.png" class="cartButton" width="48px" height="48px">
                     </a>
-                    <img src="images/menu.png" class="menu-icon" 
-                    onclick="menutoggle()">
+
+                    <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+                </div>
+                <div class="row">
+                    <div class="column2">
+                        <h1>New Year.<br>Fresh Start!</h1>
+                        <p>Buy and sell textbooks to get ready for the year!</p>
+                        <a href="products.html" class="exploreButton">Explore Now &#8594;</a>
+                    </div>
+                    <div class="column2">
+                        <img src="images/student.png">
+                    </div>
                 </div>
             </div>
         </div>
-        <!------------------login/registration------------------>
-        <div class="formBox">
-            <div class="buttonBox">
-                <div id="button"></div>
-                <button type="button" class="toggleButton" onclick="login()">Login</button>
-                <button type="button" class="toggleButton" onclick="register()">Register</button>
-            </div>
-            <form id="login" class="inputGroup">
-                <input type="text" class="inputField" placeholder="User Id" required>
-                <input type="password" class="inputField" placeholder="Enter Password" 
-                required>
-                <button type="submit" class="continueButton">Login</button>
-            </form>
-            <form id="register" class="inputGroup">
-                <input type="text" class="inputField" placeholder="User Id" required>
-                <input type="email" class="inputField" placeholder="Email Addresss" 
-                required>
-                <input type="password" class="inputField" placeholder="Enter Password" 
-                required>
-                <button type="continue" class="continueButton">Register</button>
-            </form>
-        </div>
-        <script>
-            var x = document.getElementById("login");
-            var y = document.getElementById("register");
-            var z = document.getElementById("button");
 
-            function register(){
-                x.style.left = "-400px";
-                y.style.left = "50px";
-                z.style.left = "110px";
-            }
-            function login(){
-                x.style.left = "50px";
-                y.style.left = "450px";
-                z.style.left = "0";
-            }
-        </script>
-        <!------------------footer------------------>
+<!----------------featured categories--------------->
+        <div class="catergories">
+            <div class="smallContainer">
+                <h2 class="title">Featured Categories</h2>
+                <div class="row">
+                    <div class="column3">
+                        <img src="images/math.png" width="0px">
+                    </div>
+                    <div class="column3">
+                        <img src="images/science.png" width="0px">
+                    </div>
+                    <div class="column3">
+                        <img src="images/english.png" width="0px">
+                    </div>
+                </div>
+            </div>
+        </div>
+<!----------------featured products---------------->
+        <div class="smallContainer">
+            <h2 class="title">Popular Products</h2>
+            <div class="row">
+                <div class="column4">
+                    <img src="images/textbook1.png" width="225px">
+                    <h4>Year 2 English Textbook</h4>
+                    <p>$25.00</p>
+                </div>
+                <div class="column4">
+                    <img src="images/textbook2.png" width="225px">
+                    <h4>Year 3 English Textbook</h4>
+                    <p>$25.00</p>
+                </div>
+                <div class="column4">
+                    <img src="images/textbook3.png" width="225px">
+                    <h4>Year 1 English Practice Textbook</h4>
+                    <p>$30.00</p>
+                </div>
+            </div>
+        </div>
+<!------------------footer------------------>
         <div class="footer">
             <div class="container">
                 <div class="row">
@@ -110,5 +121,19 @@
                 <p class="copyright">Copyright 2020 - BeeBook</p>
             </div>
         </div>
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+            
+            MenuItems.style.maxHeight = "0px";
+            
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px"){
+                    MenuItems.style.maxHeight = "200px";
+                }
+                else{
+                    MenuItems.style.maxHeight = "0px";
+                }
+            }
+        </script>
     </body>
 </html>

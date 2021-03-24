@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-
         scale=1.0">
         <title>BeeBook | Ecommerce Website Design</title>
-        <link rel="stylesheet" href="home.css">
-        <script src="home.js"></script>
+        <link rel="stylesheet" href="product-details.css">
+        <script src="product-details.js"></script>
     </head>
     <body>
         <!------------------header------------------>
@@ -21,7 +21,7 @@
                     <!--list of items on navbar-->
                     <nav>
                         <ul id="MenuItems">
-                            <li><a href="home.html" class="navbarButton">Home</a></li>
+                            <li><a href="index.html" class="navbarButton">Home</a></li>
                             <li><a href="products.html" class="navbarButton">Browse</a></li>
                             <li><a href="" class="navbarButton">Sell</a></li>
                             <li><a href="about.html" class="navbarButton">About Us/FAQ</a></li>
@@ -31,61 +31,33 @@
                     <a href="cart.html">
                         <img src="images/cart.png" class="cartButton" width="48px" height="48px">
                     </a>
-
-                    <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
-                </div>
-                <div class="row">
-                    <div class="column2">
-                        <h1>New Year.<br>Fresh Start!</h1>
-                        <p>Buy and sell textbooks to get ready for the year!</p>
-                        <a href="products.html" class="exploreButton">Explore Now &#8594;</a>
-                    </div>
-                    <div class="column2">
-                        <img src="images/student.png">
-                    </div>
+                    <img src="images/menu.png" class="menu-icon" 
+                    onclick="menutoggle()">
                 </div>
             </div>
         </div>
-
-<!----------------featured categories--------------->
-        <div class="catergories">
-            <div class="smallContainer">
-                <h2 class="title">Featured Categories</h2>
-                <div class="row">
-                    <div class="column3">
-                        <img src="images/math.png" width="0px">
-                    </div>
-                    <div class="column3">
-                        <img src="images/science.png" width="0px">
-                    </div>
-                    <div class="column3">
-                        <img src="images/english.png" width="0px">
-                    </div>
-                </div>
-            </div>
-        </div>
-<!----------------featured products---------------->
-        <div class="smallContainer">
-            <h2 class="title">Popular Products</h2>
+        <!------------------products details------------------>
+        <div class="smallContainer singleProduct">
             <div class="row">
-                <div class="column4">
-                    <img src="images/textbook1.png" width="225px">
-                    <h4>Year 2 English Textbook</h4>
-                    <p>$25.00</p>
+                <div class="column2">
+                    <img src="images/math.png" width="100%">
                 </div>
-                <div class="column4">
-                    <img src="images/textbook2.png" width="225px">
-                    <h4>Year 3 English Textbook</h4>
-                    <p>$25.00</p>
-                </div>
-                <div class="column4">
-                    <img src="images/textbook3.png" width="225px">
-                    <h4>Year 1 English Practice Textbook</h4>
-                    <p>$30.00</p>
+                <div class="column2">
+                    <h1>Math Textbook</h1>
+                    <p>Subject: Math</p>
+                    <h4>$25.00</h4>
+                    <input type="number" value="1">
+                    <a href="" class="addToCartButton">Add To Cart</a>
+                    <h3>Product Details</h3>
+                    <br>
+                    <p>Perfect for all math students! Math Refresher for Adults is the perfect 
+                        solution for anyone needing a math refresher. Excellent for home school 
+                        parents who want to help their kids with math. Includes video tutorials - 
+                        One for each lesson!</p>
                 </div>
             </div>
         </div>
-<!------------------footer------------------>
+        <!------------------footer------------------>
         <div class="footer">
             <div class="container">
                 <div class="row">
@@ -121,5 +93,19 @@
                 <p class="copyright">Copyright 2020 - BeeBook</p>
             </div>
         </div>
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+            
+            MenuItems.style.maxHeight = "0px";
+            
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px"){
+                    MenuItems.style.maxHeight = "200px";
+                }
+                else{
+                    MenuItems.style.maxHeight = "0px";
+                }
+            }
+        </script>
     </body>
 </html>
