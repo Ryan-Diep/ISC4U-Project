@@ -87,6 +87,8 @@
     display: block;
     height: auto;
     width: 180px;
+    font-size: 20px;
+    color:#312F26;
     white-space: nowrap;
     text-overflow: ellipsis;
     margin-top: -2px;
@@ -169,13 +171,13 @@ ul.rightNav li {
     list-style: none;
     width: 300px;
     line-height: 60px;
-    height: 40px;
+    height: 60px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     text-align: center;
     color: #fff;
-    background-color: #E5A030;
+    background-color: #312F26;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     cursor: pointer;
     z-index: 100px;
@@ -183,7 +185,7 @@ ul.rightNav li {
 
 /* 单鼠标移动到右侧导航栏的指定 li 上时，底色显示为暗红色 */
 ul.rightNav li:hover {
-    background-color: rgb(182, 184, 75);
+    background-color: rgb(201, 157, 12);
 }
 
 
