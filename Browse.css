@@ -63,11 +63,16 @@
     line-height: 60px;
     font-size: 28px;
     color: rgb(255, 255, 255);
-    background-color: #E5A030;
+    background: linear-gradient(to bottom right, #312F26, #E5A030);
     margin-top: 6px;
     margin-bottom: 12px;
+    
 }
 
+.shopTitle img{
+    width: 900px;
+    height: 300px;
+}
 /* 单个商品左下角的小标签 */
 .goodsList ul li .leftBottom {
     display: block;

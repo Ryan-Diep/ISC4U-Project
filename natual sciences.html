@@ -4,49 +4,39 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="Browse.css">
+	<link rel="stylesheet" href="ryan/entry.css">
 <title>Sell</title>
 </head>
 
 <body>
 	<div class="header">
 		<div class="container">
-			<div class="menuBar">
+			<div class="navbar">
 				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" width="130px"></a>
+					<a href="home.html">
+						<img src="images/logo.png" class="logoButton" width="130px">
+					</a>
 				</div>
-				<!--list of items on menubar-->
-				<menu>
-					<ul>
-						<li><input type="text" value="Search.."></li>
-						<li ><a href="index.html">Home</a></li>
-						<li><a href="">Browse</a>
-							<div class="popwindow">
-								<div class="poptop">
-										<p class="firstList">Subjects:</p>
-										<p>Business</p>
-										<p>Computer science</p>
-										<p>Educational</p>
-										<p>Engineering</p>
-										<p>Humanities</p>
-										<p>Mathematics</p>
-								</div>
-								<div class="popbot">
-									<p>Spring Sale!</br>
-									Up to 50% OFF!!</p>
-								</div>
-							</div>
-						</li>
-						<li><a href="Sell page.html">Sell</a></li>
-						<li><a href="about us.html">About Us/FAQ</a></li>
-						<li><a href="Account login.html">Account</a></li>
+				<!--list of items on navbar-->
+				<nav>
+					<ul id="MenuItems">
+						<li><a href="home.html" class="navbarButton">Home</a></li>
+						<li><a href="products.html" class="navbarButton">Browse</a></li>
+						<li><a href="" class="navbarButton">Sell</a></li>
+						<li><a href="about.html" class="navbarButton">About Us/FAQ</a></li>
+						<li><a href="entry.html" class="navbarButton">Account</a></li>
 					</ul>
 				</nav>
-				<img src="images/cart.png" width="30px" height="30px">
+				<a href="cart.html">
+					<img src="images/cart.png" class="cartButton" width="48px" height="48px">
+				</a>
+				<img src="images/menu.png" class="menu-icon" 
+				onclick="menutoggle()">
 			</div>
 		</div>
 	</div>
 <!----------------------Title-------------------->
-	<div class="shopTitle">★English★<img src="business.jpg" alt="" class="topimg"></div>
+	<div class="shopTitle">★Natural science★<img src="images/natural science.jpg" alt="" class="topimg"></div>
 <!----------------------Image-------------------->
 	
 <!----------------------Book list-------------------->
@@ -478,14 +468,14 @@
 		</ul>
 	</div>
 
-	<!-- 右侧导航栏 -->
+	<!-- right navbar -->
     <ul class="rightNav">
         <a href="javascript:;">
             <li style="    height: 34px;
             line-height: 34px;"><span id="oneCar"></span><span>Cart</span></li>
         </a>
         <a href="English.html">
-            <li>★English★</li>
+            <li>English</li>
         </a>
         <a href="computer science.html">
             <li>Computer Science </li>
@@ -506,7 +496,7 @@
             <li>Medicine</li>
         </a>
         <a href="natual sciences.html">
-            <li>Natural Sciences</li>
+            <li>★Natural Sciences★</li>
         </a>
         <a href="#top">
             <li style="    height: 34px;
@@ -514,16 +504,41 @@
         </a>
     </ul>
 <!----------------------Footer--------------------->
-	<div class="bottomBox">
-		<div class="botul">
-			<ul>
-				<li>EARL OF MARCH SS</li>
-				<li>4 The Parkway, Kanata, ON K2K 1Y4</li>
-				<li>Phone (613) 592-3361 | Fax (613) 592-9501</li>
-				<li>Email: earlofmarchss@ocdsb.ca </li>
-			</ul>
-		</div>
-	</div>
+	<div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-column1">
+                        <h3>Download Our App</h3>
+                        <p>Download App for Android and ios mobile phone.</p>
+                    </div>
+                    <div class="footer-column2">
+                        <img src="ryan/images/logo-wide.png">
+                        <p>Our Purpose Is To Provide a Platform That Helps Students Sell 
+                            and Buy Textbooks With Ease.</p>
+                    </div>
+                    <div class="footer-column3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright 2020 - BeeBook</p>
+            </div>
+        </div>
 	<script src="index.js"></script>
 </body>
 </html>
