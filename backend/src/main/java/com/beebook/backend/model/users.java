@@ -14,18 +14,17 @@ import javax.persistence.Table;
 public class users {
   @Id
   //@GeneratedValue(strategy=GenerationType.AUTO)
-  @GeneratedValue
-  @Column(name = "USER_ID")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer USER_ID;
-  @Column(name = "USER_NAME")
+
   private String USER_NAME;
-  @Column(name = "FIRST_NAME")
+
   private String FIRST_NAME;
-  @Column(name = "LAST_NAME")
+
   private String LAST_NAME;
-  @Column(name = "PASSWORD")
+
   private String PASSWORD;
-  @Column(name = "EMAIL_ADDRESS")
+
   private String EMAIL_ADDRESS;
 
 
