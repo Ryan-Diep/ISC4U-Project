@@ -1,6 +1,6 @@
 /* used to define thickness of margins and paddings, and size of box*/ 
 *{
-    margin: 0;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
 }
@@ -158,7 +158,7 @@ th:last-child{
     max-width: 400px;
 }
 table{
-    width: 100%;
+    width: 950px;
     border-collapse: collapse;
 }
 .footer{
