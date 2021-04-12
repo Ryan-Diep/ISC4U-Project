@@ -92,18 +92,44 @@ p{
     flex-wrap: wrap;
     justify-content:space-around;
 }
-table{
-	margin-left: auto;
-	margin-right: auto;
+.formGroup{
+    top:180px;
+    position: absolute;
+    width: 280px;
 }
-h4{
-	font-size: 30px;
+.form-input{
+    width: 100%;
+    padding: 0px 0;
+    margin: 15px 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
 }
-th{
-	font-size: 30px;
+.form-input input{
+	width: 100%;
+	font-size: 16px;
+	border: none;
+	border-color: transparent;
+	background-color:#FAF6EF;
+	outline:none;
 }
-td{
-	text-align: center;
+.continueButton{
+	color: #FAF6EF;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: #B44402;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    transition: background-color 0.5s;
+}
+.continueButton:hover{
+    background: #312F26;
 }
 .footer{
     background: #312F26;

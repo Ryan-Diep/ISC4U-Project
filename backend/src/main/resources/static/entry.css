@@ -1,3 +1,4 @@
+@charset "ISO-8859-1";
 /* used to define thickness of margins and paddings, and size of box*/ 
 *{
     margin: 0;
@@ -7,11 +8,8 @@
 body{
     font-size: 22px;
     font-family: 'Poppins', sans-serif;
-    background-color: #FAF6EF;
+    background: #FAF6EF;
 }
-
-
-/******************header******************/
 /* changes spacing with size of window*/
 .navbar{
     display:flex;
@@ -38,15 +36,9 @@ a{
     text-decoration: none;
     color: #FAF6EF;
 }
-/* destermine paragraph text color*/
+/* determine paragraph text color*/
 p{
     color:#FAF6EF;
-}
-.header{
-    background: linear-gradient(to bottom right, #312F26, #E5A030);
-}
-.header .row{
-    margin-top: 70px;
 }
 /* determines max width of menu bar and add padding*/
 .container{
@@ -55,15 +47,55 @@ p{
     padding-left: 25px;
     padding-right: 25px;
 }
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+.smallContainer{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 0px;
+    padding-right: 25px;
+}
+.column1{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.column1 img{
+    max-width: 100%;
+    padding-top: 50px 0;
+}
+.column1 p{
+	color: #312F26;
+	font-size: 16px;
+}
+.register{
+	text-align: center;
+}
+.entryButton{
+    display: inline-block;
+    background: #B44402;
+    color: #FAF6EF;
+    padding: 8px 30px;
+    margin-top: 30px;
+    border-radius: 30px;
+    transition: background-color 0.5s;
+}
+.entryButton:hover{
+    background: #312F26;
+}
 .logoButton{
     border: 2px solid transparent;
+    border-radius: 3px;
     padding: 8px 3px;
     transition: border 0.3s;
 }
 .logoButton:hover{
     border: 2px solid #FAF6EF;
-    border-radius: 3px;
     padding: 8px 3px;
+    padding-bottom: 8px;
 }
 .cartButton{
     border: 2px solid transparent;
@@ -87,87 +119,12 @@ p{
     border-radius: 3px;
     padding: 5px;
 }
-.row{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content:space-around;
+.header{
+    background: linear-gradient(to bottom right, #312F26, #E5A030);
 }
-
-
-/******************log in/register******************/
-.formBox{
-    width: 380px;
-    height: 480px;
-    position: relative;
-    margin: 6% auto;
-    border: 2px solid #312f26ad;
-    background: #FAF6EF;
-    padding: 5px;
-    overflow: hidden;
+.header .row{
+    margin-top: 70px;
 }
-.buttonBox{
-    width: 220px;
-    margin: 35px auto;
-    position: relative;
-    box-shadow: 0 0 20px 9px #e5a03065;
-    border-radius: 30px;
-}
-.toggleButton{
-    padding:10px 30px;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-    outline: none;
-    position: relative;
-}
-#button{
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 110px;
-    height: 100%;
-    background: linear-gradient(to right, #312F26, #E5A030);
-    border-radius: 30px;
-    transition: 0.5s;
-}
-.inputGroup{
-    top:180px;
-    position: absolute;
-    width: 280px;
-    transition: 0.5s;
-}
-.inputField{
-    width: 100%;
-    padding: 10px 0;
-    margin: 5px 0;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    border-bottom: 1px solid #999;
-    outline: none;
-    background: transparent;
-}
-.continueButton{
-    width: 85%;
-    padding: 10px 30px;
-    cursor: pointer;
-    display: block;
-    margin: auto;
-    background: linear-gradient(to right, #312F26, #E5A030);
-    border: 0;
-    outline: none;
-    border-radius: 30px;
-}
-#login{
-    left: 50px;
-}
-#register{
-    left: 450px;
-}
-
-
-/******************footer******************/
 .footer{
     background: #312F26;
     color: #8a8a8a;
@@ -200,7 +157,7 @@ p{
     flex-basis: 12%;
     text-align: center;
 }
-.footer hr{
+.foote hr{
     border: non;
     background: #b5b5b5;
     height: 1px;
@@ -236,6 +193,7 @@ ul{
         cursor: pointer;
     }
 }
+
 /*--media query for less than 600 screen size--*/
 @media only screen and (max-width: 600px){
     .row{
