@@ -1,0 +1,21 @@
+@charset "ISO-8859-1";
+table{
+	margin-left:auto;
+	margin-right:auto;
+	border-collapse: collapse;
+}
+
+th{
+	padding: 3px 30px;
+	text-align: center;
+	border: 1px solid black;
+	background-color: blue;
+}
+td{
+	padding: 3px 30px;
+	text-align: center;
+	border: 1px solid black;
+}
+.add{
+	border: transparent;
+}

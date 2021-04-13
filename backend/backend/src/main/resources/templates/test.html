@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="test.css">
+	</head>
+	<body>
+		<div class="textbooks">
+			<h1>List of All Textbooks</h1>
+			<table class="table">
+				<tr>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Subject</th>
+					<th>Condition</th>
+					<th>Price</th>
+					<th>Description</th>
+				</tr>
+				<tr th:each="textbooks: ${listTextbooks}">
+					<td th:text="${textbooks.name}">Title</td>
+					<td th:text="${textbooks.author}">Author</td>
+					<td th:text="${textbooks.subject}">Subject</td>
+					<td th:text="${textbooks.condition}">Condition</td>
+					<td th:text="${textbooks.originalPrice}">Price</td>
+					<td th:text="${textbooks.description}">Description</td>
+					<td class="add"><a href="">Visit W3Schools.com!</a></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
