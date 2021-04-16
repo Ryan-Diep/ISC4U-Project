@@ -4,7 +4,9 @@ import javax.persistence.*;
  
 @Entity
 public class Users {
-     
+    
+	//declare variables
+	//auto generate a unique id type with each new user
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int USER_ID;
@@ -19,7 +21,7 @@ public class Users {
 
     private String EMAIL_ADDRESS;
 
-
+    //getters and setters
     public int getId() {
       return USER_ID;
     }

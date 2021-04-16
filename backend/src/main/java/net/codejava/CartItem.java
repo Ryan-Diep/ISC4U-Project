@@ -4,6 +4,9 @@ import javax.persistence.*;
 
 @Entity
 public class CartItem {
+	
+	//declare variables
+	//auto generate a unique id type with each new user
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int cart_id;
@@ -17,7 +20,8 @@ public class CartItem {
 	private Users users;
 	
 	private int quantity;
-
+	
+	//getters and setters
 	public int getCart_id() {
 		return cart_id;
 	}

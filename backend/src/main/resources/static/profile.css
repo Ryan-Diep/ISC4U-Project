@@ -1,5 +1,4 @@
 @charset "ISO-8859-1";
-/* used to define thickness of margins and paddings, and size of box*/ 
 *{
     margin: 0;
     padding: 0;
@@ -10,33 +9,27 @@ body{
     font-family: 'Poppins', sans-serif;
     background: #FAF6EF;
 }
-/* changes spacing with size of window*/
 .navbar{
     display:flex;
     align-items: center;
     padding: 20px;
 }
-/* defines the amount items flex and aligns them to the right side*/
 nav{
     flex: 1;
     text-align: right;
 }
-/* displays items in a row*/
 nav ul{
     display: inline-block;
     list-style-type: none;
 }
-/* add margin on the right side*/
 nav ul li{
     display: inline-block;
     margin-right: 10px
 }
-/*determine menu bar text color*/
 a{
     text-decoration: none;
     color: #FAF6EF;
 }
-/* destermine paragraph text color*/
 p{
     color:#FAF6EF;
 }
@@ -46,7 +39,6 @@ p{
 .header .row{
     margin-top: 70px;
 }
-/* determines max width of menu bar and add padding*/
 .message{
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -172,6 +164,7 @@ ul{
     margin-left: 20px;
     display: none;
 }
+/*--media query for less than 800 screen size--*/
 @media only screen and (max-width: 800px){
     
     nav ul{

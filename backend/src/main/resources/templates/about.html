@@ -1,3 +1,6 @@
+<!-- the function of this page is to tell the user about the developpers 
+and application and answer frequently asked questions -->
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
@@ -6,18 +9,20 @@
         scale=1.0">
         <title>About Us & FAQ - BeeBook</title>
         <link rel="stylesheet" href="about.css">
-        <script src="about.js"></script>
     </head>
     <body>
         <!------------------header------------------>
         <div class="header">
             <div class="container">
                 <div class="navbar">
+                
+                	<!-- logo button -->
                     <div class="logo">
                         <a href="/index">
                             <img src="images/logo.png" class="logoButton" width="130px">
                         </a>
                     </div>
+                    
                     <!--list of items on navbar-->
                     <nav>
                         <ul id="MenuItems">
@@ -28,17 +33,24 @@
                             <li><a href="/entry" class="navbarButton">Account</a></li>
                         </ul>
                     </nav>
+                    
+                    <!-- cart button -->
                     <a href="/cart">
                         <img src="images/cart.png" class="cartButton" width="48px" height="48px">
                     </a>
+                    
+                    <!-- menu button -->
                     <img src="images/menu.png" class="menu-icon" 
                     onclick="menutoggle()">
                 </div>
             </div>
         </div>
         
+        <!-- about us information -->
         <div class="about">
         	<br>
+        	
+        	<!-- beebook information -->
         	<table>
         		<tr>
 	        		<th>Who we are</th>
@@ -49,8 +61,9 @@
 	        		manage and filter through a database of textbooks sold by <br>
 	        		businesses and other students, all in one place. </td>
 	        	</tr>
+	        	
+	        <!-- developper information -->
 	        </table>
-        	</div>
         	<br>
         	<div class="row">
         		<h4>Developpers</h4>
@@ -74,18 +87,25 @@
         	</table>
         	<br>
         </div>
+        
         <!------------------footer------------------>
         <div class="footer">
             <div class="container">
                 <div class="row">
+                
+                	<!-- mobile app column -->
                     <div class="footer-column1">
                         <h3>Download Our App</h3>
                         <p>Download App for Android and ios mobile phone.</p>
                     </div>
+                    
+                    <!-- logo and mission column -->
                     <div class="footer-column2">
                         <img src="images/logo-wide.png">
                         <p>Our Purpose Is To Provide a Platform That Helps Students Sell and Buy Textbooks With Ease.</p>
                     </div>
+                    
+                    <!-- useful links column -->
                     <div class="footer-column3">
                         <h3>Useful Links</h3>
                         <ul>
@@ -95,6 +115,8 @@
                             <li>Join Affiliate</li>
                         </ul>
                     </div>
+                    
+                    <!-- social media column -->
                     <div class="footer-column4">
                         <h3>Follow Us</h3>
                         <ul>
@@ -109,11 +131,15 @@
                 <p class="copyright">Copyright 2020 - BeeBook</p>
             </div>
         </div>
+        
+        <!-- menu button javascript for small screens -->
         <script>
+        	//Define variables
             var MenuItems = document.getElementById("MenuItems");
             
             MenuItems.style.maxHeight = "0px";
             
+            //call menutoggle() function
             function menutoggle(){
                 if(MenuItems.style.maxHeight == "0px"){
                     MenuItems.style.maxHeight = "200px";

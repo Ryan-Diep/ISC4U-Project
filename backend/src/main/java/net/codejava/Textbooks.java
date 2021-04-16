@@ -5,6 +5,8 @@ import javax.persistence.*;
 @Entity
 public class Textbooks {
 	
+	//declare variables
+	//auto generate a unique id type with each new user
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int tb_id;
@@ -30,7 +32,8 @@ public class Textbooks {
     public int getTextbookId() {
       return tb_id;
     }
-
+    
+    //getters and setters
     public void setTextbookId(int tb_id) {
       this.tb_id = tb_id;
     }

@@ -1,3 +1,5 @@
+<!-- the function of this page is to display all the textbooks in the user's cart
+and allow this to checkout -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
@@ -12,11 +14,14 @@
         <div class="header">
             <div class="container">
                 <div class="navbar">
+                
+                	<!-- logo button -->
                     <div class="logo">
                         <a href="/index">
                             <img src="images/logo.png" class="logoButton" width="130px">
                         </a>
                     </div>
+                    
                     <!--list of items on navbar-->
                     <nav>
                         <ul id="MenuItems">
@@ -27,60 +32,70 @@
                             <li><a href="/entry" class="navbarButton">Account</a></li>
                         </ul>
                     </nav>
+                    
+                    <!-- cart button -->
                     <a href="/cart">
                         <img src="images/cart.png" class="cartButton" width="48px" height="48px">
                     </a>
+                    
+                    <!-- menu button -->
                     <img src="images/menu.png" class="menu-icon" 
                     onclick="menutoggle()">
                 </div>
             </div>
         </div>
+        
         <!------------------cart items------------------>
         <div class="smallContainer cart">
+        
+        <!-- table headings -->
             <table>
                 <tr>
 					<th>Title</th>
 					<th>Quantity</th>
 					<th>Price ($CAD)</th>
 				</tr>
-				<tr>
-					<td>Grade 12 Advanced Functions Nelson Textbook</td>
-					<td>1</td>
-					<td>49.08</td>
-					<td class="add"><a href="/remove_item" class="addButton">Remove</a></td>
-				</tr>
-				<tr>
-					<td>Grade 12 Chemistry Nelson Textbook</td>
-					<td>1</td>
-					<td>69.69</td>
-					<td class="add"><a href="/cart2" class="addButton">Remove</a></td>
+				
+				<!-- textbooks in cart-->
+				<!-- th:each creates a row for each textbook in users cart -->
+				<tr th:each="item, status : ${cartItem}">
+					<td th:text="${item.textbooks}">Title</td>
+					<td>[[${status.count]]</td>
+					<td th:text="${item.quantity}">Price</td>
+					
 				</tr>
 			</table>
+			
+			<!-- total cost and checkout button -->
 			<table>
 				<tr>
 					<th>Total Cost ($CAD)</th>
 				</tr>
 				<tr>
-					<td>118.77</td>
-					<td class="add"><a href="/remove_item" class="addButton">Check Out</a></td>
+					<td id="totalAmount"></td>
+					<td class="add"><a href="/cart/remove/{pid}" class="addButton">Check Out</a></td>
 				</tr>
 			</table>
-				
-			</div>
         </div>
+        
         <!------------------footer------------------>
         <div class="footer">
             <div class="container">
                 <div class="row">
+                
+                	<!-- mobile app column -->
                     <div class="footer-column1">
                         <h3>Download Our App</h3>
                         <p>Download App for Android and ios mobile phone.</p>
                     </div>
+                    
+                    <!-- logo and mission column -->
                     <div class="footer-column2">
                         <img src="images/logo-wide.png">
-                        <p>Our Purpose Is To Provide a Platform That Helps Students Sell 
-                            and Buy Textbooks With Ease.</p>
+                        <p>Our Purpose Is To Provide a Platform That Helps Students Sell and Buy Textbooks With Ease.</p>
                     </div>
+                    
+                    <!-- useful links column -->
                     <div class="footer-column3">
                         <h3>Useful Links</h3>
                         <ul>
@@ -90,6 +105,8 @@
                             <li>Join Affiliate</li>
                         </ul>
                     </div>
+                    
+                    <!-- social media column -->
                     <div class="footer-column4">
                         <h3>Follow Us</h3>
                         <ul>
@@ -104,11 +121,15 @@
                 <p class="copyright">Copyright 2020 - BeeBook</p>
             </div>
         </div>
+        
+        <!-- menu button javascript for small screens -->
         <script>
+        	//Define variables
             var MenuItems = document.getElementById("MenuItems");
             
             MenuItems.style.maxHeight = "0px";
             
+            //call menutoggle() function
             function menutoggle(){
                 if(MenuItems.style.maxHeight == "0px"){
                     MenuItems.style.maxHeight = "200px";
@@ -117,6 +138,12 @@
                     MenuItems.style.maxHeight = "0px";
                 }
             }
+        </script>    
+
+        <script type="text/javascript">
+        	contextPath = "[[@{/}]]"
+        	var crsHeadName = "[[${_csrf.token}]]";
         </script>
+        <script th:src= "@{/js/shopping_cart.js}"></script>
     </body>
 </html>

@@ -18,7 +18,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
-     
+    
+    
+    //declaring beans
     @Bean
     public UserDetailsService userDetailsService() {
         return new CustomUserDetailsService();
@@ -37,12 +39,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
          
         return authProvider;
     }
- 
+    
+    //set authentication provide for auth object
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(authenticationProvider());
     }
  
+    /configure http spring security
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()

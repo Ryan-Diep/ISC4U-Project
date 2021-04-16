@@ -1,3 +1,6 @@
+<!-- the purpose of this page is to allow users to view all textbooks in the database
+and add textbooks to cart -->
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
@@ -12,11 +15,14 @@
         <div class="header">
             <div class="container">
                 <div class="navbar">
+                
+                	<!-- logo button -->
                     <div class="logo">
                         <a href="/index">
                             <img src="images/logo.png" class="logoButton" width="130px">
                         </a>
                     </div>
+                    
                     <!--list of items on navbar-->
                     <nav>
                         <ul id="MenuItems">
@@ -27,16 +33,24 @@
                             <li><a href="/entry" class="navbarButton">Account</a></li>
                         </ul>
                     </nav>
+                    
+                    <!-- cart button -->
                     <a href="/cart">
                         <img src="images/cart.png" class="cartButton" width="48px" height="48px">
                     </a>
+                    
+                    <!-- menu button -->
                     <img src="images/menu.png" class="menu-icon" 
                     onclick="menutoggle()">
                 </div>
             </div>
         </div>
+        
+        <!-- list of textbooks -->
         <div class="textbooks">
 			<table class="table">
+			
+				<!-- table headings -->
 				<tr>
 					<th>Title</th>
 					<th>Author</th>
@@ -46,6 +60,9 @@
 					<th>Quantity</th>
 					<th>Description</th>
 				</tr>
+				
+				<!-- textbook information -->
+				<!-- th:each creates a row for each textbook in the table -->
 				<tr th:each="textbooks: ${listTextbooks}">
 					<td th:text="${textbooks.name}">Title</td>
 					<td th:text="${textbooks.author}">Author</td>
@@ -54,22 +71,29 @@
 					<td th:text="${textbooks.originalPrice}">Price</td>
 					<td th:text="${textbooks.quantity}">Quantity</td>
 					<td th:text="${textbooks.description}">Description</td>
-					<td class="add"><a href="/browse2" class="addButton">Add to Cart</a></td>
+					<td class="add"><a href="/cart/add/{tid}/{qty}" class="addButton">Add to Cart</a></td>
 				</tr>
 			</table>
 		</div>
+		
         <!------------------footer------------------>
         <div class="footer">
             <div class="container">
                 <div class="row">
+                
+                	<!-- mobile app column -->
                     <div class="footer-column1">
                         <h3>Download Our App</h3>
                         <p>Download App for Android and ios mobile phone.</p>
                     </div>
+                    
+                    <!-- logo and mission column -->
                     <div class="footer-column2">
                         <img src="images/logo-wide.png">
                         <p>Our Purpose Is To Provide a Platform That Helps Students Sell and Buy Textbooks With Ease.</p>
                     </div>
+                    
+                    <!-- useful links column -->
                     <div class="footer-column3">
                         <h3>Useful Links</h3>
                         <ul>
@@ -79,6 +103,8 @@
                             <li>Join Affiliate</li>
                         </ul>
                     </div>
+                    
+                    <!-- social media column -->
                     <div class="footer-column4">
                         <h3>Follow Us</h3>
                         <ul>
@@ -93,11 +119,15 @@
                 <p class="copyright">Copyright 2020 - BeeBook</p>
             </div>
         </div>
+        
+        <!-- menu button javascript for small screens -->
         <script>
+        	//Define variables
             var MenuItems = document.getElementById("MenuItems");
             
             MenuItems.style.maxHeight = "0px";
             
+            //call menutoggle() function
             function menutoggle(){
                 if(MenuItems.style.maxHeight == "0px"){
                     MenuItems.style.maxHeight = "200px";

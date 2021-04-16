@@ -1,14 +1,18 @@
 $(document).ready(function() {
-	$("buttonAdd2Cart").on("click", function(e) {
+	/*select button by id */
+	$("submit").on("click", function(e) {
 		addToCart();
 	});
 });
 
 function addToCart() {
+	/*read quantity */
 	quantity = $("#quantity" + textbook_id).val();
 	
+	/*contract url to webservice */
 	url = contextPath + "cart/add/" + textbook_id + "/" + quantity;
 	
+	/*call to server */
 	$.ajax({
 		type: "POST",
 		url: url,

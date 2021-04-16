@@ -1,10 +1,11 @@
+<!-- the function of this page is to provide the user with a form for them to list their textbooks for sale -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="ISO-8859-1">
         <meta name="viewport" content="width=device-width, initial-
         scale=1.0">
-        <title>Login and Registration - BeeBook</title>
+        <title>Sell - BeeBook</title>
         <link rel="stylesheet" href="signup_form.css">
 	</head>
 	<body>
@@ -12,11 +13,14 @@
         <div class="header">
             <div class="container">
                 <div class="navbar">
+                
+                	<!-- logo button -->
                     <div class="logo">
                         <a href="/index">
                             <img src="images/logo.png" class="logoButton" width="130px">
                         </a>
                     </div>
+                    
                     <!--list of items on navbar-->
                     <nav>
                         <ul id="MenuItems">
@@ -27,55 +31,79 @@
                             <li><a href="/entry" class="navbarButton">Account</a></li>
                         </ul>
                     </nav>
+                    
+                    <!-- cart button -->
                     <a href="/cart">
                         <img src="images/cart.png" class="cartButton" width="48px" height="48px">
                     </a>
+                    
+                    <!-- menu button -->
                     <img src="images/menu.png" class="menu-icon" 
                     onclick="menutoggle()">
                 </div>
             </div>
         </div>
-	    <div class="containerr">	    
+        
+        <!-- sell form -->
+	    <div class="container">	   
+	    
+	    	<!-- specify action to process form on submission, style form, and refer to textbooks object in the model --> 
 		    <form th:action="@{/process_post}" method="post"
 		    	style="max-width: 600px; margin: 0 auto"
 		    	th:object="${textbooks}">
+		    	
+		    <!-- form -->
 		    <div class="form group">
+		    
+		    	<!-- title field -->
 			    <div class="form-input">
 			   			<label class="col-form-label col-4">Title</label>
 			   			<div class="col-8">
 			   				<input type="text" class="form-control" th:field="*{name}" placeholder="Enter Title" required/>
 			   			</div>
 		   		</div>
+		   		
+		   		<!-- author field -->
 		   		<div class="form-input">
 		   			<label class="col-form-label col-4">Author</label>
 		   			<div class="col-8">
 		   				<input type="text" class="form-control" th:field="*{author}" placeholder="Enter Author" required/>
 		   			</div>
 		   		</div>
+		   		
+		   		<!-- subject field -->
 		   		<div class="form-input">
 		   			<label class="col-form-label col-4">Subject</label>
 		   			<div class="col-8">
 		   				<input type="text" class="form-control" th:field="*{subject}" placeholder="Enter Subject" required/>
 		   			</div>  
 		   		</div>
+		   		
+		   		<!-- quantity field -->
 		   		<div class="form-input">
 		   			<label class="col-form-label col-4">Quantity</label>
 		   			<div class="col-8">
 		   				<input type="number" min="1" class="form-control" th:field="*{quantity}" placeholder="Enter Quantity" required/>
 		   			</div>
 		   		</div>
+		   		
+		   		<!-- condition field -->
 		   		<div class="form-input">
 		   			<label class="col-form-label col-4">Condition (From 1-5)</label>
 		   			<div class="col-8">
 		   				<input type="number" min="1" max="5" class="form-control" th:field="*{condition}" placeholder="Enter Condition" required/>
 		   			</div>
 		   		</div>
+		   		
+		   		<!-- price field -->
 		   		<div class="form-input">
 		   			<label class="col-form-label col-4">Price ($CAD)</label>
 		   			<div class="col-8">
 		   				<input type="number" min="0" step=".01" class="form-control" th:field="*{originalPrice}" placeholder="Enter Price" required/>
 		   			</div>
 		   		</div>
+		   		
+		   		<!-- description field -->
 		   		<div class="form-input">
 		   			<label class="col-form-label col-4">Description</label>
 		   			<div class="col-8">
@@ -83,6 +111,7 @@
 		   			</div>  
 		   		</div>
 		   		
+		   		<!-- submit buttom to submit forms -->
 		   		<div>
 		   			<button type="submit" class="continueButton">Post</button>
 		   			<br>
@@ -90,18 +119,25 @@
 	    	</div>
 		    </form>
 	    </div> 
-	            <!------------------footer------------------>
+	    
+		<!------------------footer------------------>
         <div class="footer">
             <div class="container">
                 <div class="row">
+                
+                	<!-- mobile app column -->
                     <div class="footer-column1">
                         <h3>Download Our App</h3>
                         <p>Download App for Android and ios mobile phone.</p>
                     </div>
+                    
+                    <!-- logo and mission column -->
                     <div class="footer-column2">
                         <img src="images/logo-wide.png">
                         <p>Our Purpose Is To Provide a Platform That Helps Students Sell and Buy Textbooks With Ease.</p>
                     </div>
+                    
+                    <!-- useful links column -->
                     <div class="footer-column3">
                         <h3>Useful Links</h3>
                         <ul>
@@ -111,6 +147,8 @@
                             <li>Join Affiliate</li>
                         </ul>
                     </div>
+                    
+                    <!-- social media column -->
                     <div class="footer-column4">
                         <h3>Follow Us</h3>
                         <ul>
@@ -125,11 +163,15 @@
                 <p class="copyright">Copyright 2020 - BeeBook</p>
             </div>
         </div>
+        
+        <!-- menu button javascript for small screens -->
         <script>
+        	//Define variables
             var MenuItems = document.getElementById("MenuItems");
             
             MenuItems.style.maxHeight = "0px";
             
+            //call menutoggle() function
             function menutoggle(){
                 if(MenuItems.style.maxHeight == "0px"){
                     MenuItems.style.maxHeight = "200px";
@@ -140,6 +182,4 @@
             }
         </script>    
     </body>
-</html>
-	</body>
 </html>
